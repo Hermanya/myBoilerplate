@@ -26,3 +26,4 @@ The boilerplate is ready to use!
 Open the page you want to work on in the browser, click on the **LiveReload** icon. 
 Open Terminal, navigate into the project directory and run `grunt`. 
 Do this every time you continue working on this project. It will automatically compile your CoffeeScripts and Stylus style sheets into js and css *on save*.
+
