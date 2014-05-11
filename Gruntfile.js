@@ -25,6 +25,14 @@ module.exports = function(grunt){
           }
         },
         coffee: {
+          glob_to_multiple: {
+            expand: true,
+            flatten: true,
+            cwd: 'src/scripts/',
+            src: ['*.coffee'],
+            dest: 'bin/scripts/',
+            ext: '.js'
+          },
           compileWithMaps: {
             options: {
               sourceMap: true
@@ -34,7 +42,7 @@ module.exports = function(grunt){
             }
           }
         }
-    });pkg: grunt.file.readJSON('package.json'),
+    });
     grunt.loadNpmTasks('grunt-contrib-stylus');
     grunt.loadNpmTasks('grunt-contrib-coffee');
     grunt.loadNpmTasks('grunt-contrib-watch');

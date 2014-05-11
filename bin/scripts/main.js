@@ -4,5 +4,3 @@
   });
 
 }).call(this);
-
-//# sourceMappingURL=../bin/script.js.map

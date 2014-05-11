@@ -1,2 +1,2 @@
 $(document).ready ->
-	$("#info").html "<h1>Boilerplate</h1>"
+	$("#info").html "<h1>myBoilerplate</h1>"
