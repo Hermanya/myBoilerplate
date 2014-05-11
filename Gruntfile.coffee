@@ -1,11 +1,11 @@
 module.exports = (grunt) ->
-  grunt.initConfig({
+  grunt.initConfig(
     pkg: grunt.file.readJSON('package.json'),
     watch:
       css:
         files: '**/*.styl'
         tasks: ['stylus']
-        options: {
+        options:
           livereload: true
       js:
         files: '**/*.coffee'
@@ -29,6 +29,7 @@ module.exports = (grunt) ->
           sourceMap: true
         files:
           'bin/script.js': ['src/scripts/*.coffee']
+  )
   grunt.loadNpmTasks('grunt-contrib-stylus')
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-watch')
