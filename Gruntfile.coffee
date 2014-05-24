@@ -9,28 +9,37 @@ module.exports = (grunt) ->
           livereload: true
       js:
         files: '**/*.coffee'
-        tasks: ['coffee']
+        tasks: ['coffeelint','coffee','requirejs']
         options:
           livereload:true
     stylus:
       compile:
         files:
-          'bin/style.css': ['src/stylesheets/*.styl']
+          'app/style.css': ['_app/stylesheets/*.styl']
     coffee:
       glob_to_multiple:
         expand: true
         flatten: true
-        cwd: 'src/scripts/'
-        src: ['*.coffee']
-        dest: 'bin/scripts/'
-        ext: '.js'
-      compileWithMaps:
         options:
           sourceMap: true
-        files:
-          'bin/script.js': ['src/scripts/*.coffee']
+        cwd: '_app/'
+        src: ['*.coffee']
+        dest: '_app/JavaScripts/'
+        ext: '.js'
+    coffeelint:
+      app: ['*.coffee']
+    requirejs:
+      compile:
+        options:
+          name: 'config',
+          mainConfigFile: '_app/JavaScripts/config.js',
+          out: 'app/require.js',
+          optimize: 'none'
   )
   grunt.loadNpmTasks('grunt-contrib-stylus')
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-watch')
-  grunt.registerTask('default',['stylus','coffee','watch'])
+  grunt.loadNpmTasks('grunt-contrib-requirejs')
+  grunt.loadNpmTasks('grunt-coffeelint')
+  grunt.registerTask('default',
+  ['coffeelint','coffee','stylus','requirejs','watch'])

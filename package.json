@@ -1,33 +1,30 @@
 {
-	"name": "myBoilerplate",
-	"version": "0.0.1",
-	"homepage": "http://www.github.com/hermanya/myBoilerplate",
-	"description": "Boilerplate for projects with CoffeeScript and Stylus",
-	"main": "index.html",
-	"dependencies": {
-		"bower": "~1.3.3",
-		"grunt": "~0.4.0",
-		"stylus": "~0.44.0",
-		"coffee-script": "~1.7.1",
-		"grunt-contrib-coffee": "~0.8.0",
-		"grunt-contrib-stylus": "~0.9.0",
-		"grunt-contrib-watch": "^0.5.3"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/hermanya/myBoilerplate.git"
-	},
-	"keywords": [
-	"boilerplate",
-	"Coffee",
-	"CoffeeScript",
-	"Stylus",
-	"LiveReload",
-	"school"
-	],
-	"author": "Herman Starikov <hermanya@me.com>",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/hermanya/myBoilerplate/issues"
-	}
+  "name": "Life",
+  "description": "Experiment",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt qunit"
+  },
+  "author": {
+    "name": "Herman Starikov",
+    "email": "hermanya@me.com",
+    "url": "http://github.com/hermanya"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://mit-license.org"
+    }
+  ],
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-coffeelint": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-requirejs": "*"
+  }
 }
