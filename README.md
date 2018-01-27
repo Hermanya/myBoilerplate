@@ -1,5 +1,7 @@
 ## Getting Started
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/Hermanya/myBoilerplate.svg)](https://greenkeeper.io/)
+
 Make sure you have the latest packages installed
 
 ```
